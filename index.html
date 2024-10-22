@@ -1,169 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Julia Leppert</title>
-    <style>
-        /* Google Fonts Einbindung */
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Suez+One&display=swap');
-
-        /* Allgemeine Stile */
-        body {
-            font-family: 'Josefin Sans', sans-serif; /* Fließtexte in Josefin Sans */
-            margin: 0;
-            padding: 0;
-            background-color: #F4F0E7; /* Hintergrund in Weiß */
-            color: #3F3E3C; /* Textfarbe in Grau */
-            overflow: hidden; /* Verhindert das Scrollen während der Animation */
-        }
-        .intro {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Die volle Höhe des Viewports */
-            flex-direction: column;
-            animation: fadeIn 1s ease-out; /* Fade-In Animation */
-        }
-        h1 {
-            font-family: 'Suez One', serif; /* Überschrift in SUSE-ähnlicher Schrift */
-            font-size: 48px; /* Schriftgröße für die Hauptüberschrift */
-            opacity: 0; /* Start-Transparenz für die Animation */
-            transform: translateY(20px); /* Start-Position für die Animation */
-            animation: slideIn 1s forwards; /* Slide-In Animation */
-        }
-        h2 {
-            font-family: 'Suez One', serif; /* Schrift für den Untertitel */
-            font-size: 24px; /* Schriftgröße für den Untertitel */
-            opacity: 0; /* Start-Transparenz für die Animation */
-            transform: translateY(20px); /* Start-Position für die Animation */
-            animation: slideIn 1s forwards; /* Slide-In Animation */
-            animation-delay: 0.5s; /* Verzögerung für den Untertitel */
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Start-Position */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* End-Position */
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0; /* Start-Transparenz */
-            }
-            to {
-                opacity: 1; /* End-Transparenz */
-            }
-        }
-        header {
-            background-color: #809DAC; /* Header in Blau */
-            color: #F4F0E7; /* Schriftfarbe in Weiß */
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #F4F0E7; /* Link-Farbe in Weiß */
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #3F3E3C; /* Grau bei Hover */
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-        }
-        .project {
-            margin-bottom: 50px;
-            padding: 20px;
-            background: #FFFFFF; /* Projekt-Hintergrund in Weiß */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .project img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .project h2 {
-            margin-top: 0;
-            color: #3F3E3C; /* Projektüberschrift in Grau */
-        }
-        .project p {
-            font-family: 'Josefin Sans', sans-serif; /* Fließtexte in Josefin Sans */
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #809DAC; /* Footer in Blau */
-            color: #F4F0E7; /* Schriftfarbe in Weiß */
-            position: relative; /* Damit es immer am unteren Rand bleibt */
-        }
-        footer a {
-            color: #F4F0E7; /* Schriftfarbe in Weiß */
-            text-decoration: none; /* Keine Unterstreichung */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia Leppert - Grafikdesignerin</title>
+  <!-- Google Fonts: SUSE -->
+  <link href="https://fonts.googleapis.com/css2?family=Sue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Animationsbereich -->
-<div class="intro">
-    <h1>Julia Leppert</h1>
-    <h2>Grafik Designerin</h2>
-</div>
+  <!-- Header -->
+  <header>
+    <h1>Julia Leppert - Grafikdesignerin</h1>
+  </header>
 
-<header>
-    <nav>
-        <a href="#webdesign">Web-/Appdesign</a>
-        <a href="#film">Film</a>
-        <a href="#corporate">Corporate Identity</a>
-        <a href="#editorial">Editorial</a>
-    </nav>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#corporate-identity">Corporate Identity</a></li>
+      <li><a href="#webdesign">Web und Appdesign</a></li>
+      <li><a href="#bewegtbild">Bewegtbild</a></li>
+      <li><a href="#editorial">Editorial</a></li>
+    </ul>
+  </nav>
 
-<div class="container">
-    <!-- Web-/Appdesign Section -->
-    <div id="webdesign" class="project">
-        <h2>Being Well - App Design / Konzept</h2>
-        <img src="images/app-design.jpg" alt="App Design">
-        <p>Die App "Being Well" fördert das Zeitmanagement und die mentale Gesundheit von Studierenden. Sie passt sich farblich der Tageszeit an und unterstützt einen gesunden Schlafrhythmus.</p>
+  <!-- Section: Corporate Identity -->
+  <section id="corporate-identity">
+    <h2>Corporate Identity</h2>
+    <div class="slider" id="ci-slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 1">
+        <p>Projekt 1 - Corporate Identity</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 2">
+        <p>Projekt 2 - Corporate Identity</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Film Section -->
-    <div id="film" class="project">
-        <h2>Film Noir - Stop Motion</h2>
-        <img src="film-noir.jpg" alt="Film Noir">
-        <p>Ein Stop-Motion-Remake des klassischen "Film Noir"-Intros, umgesetzt mit Adobe After Effects und Stop-Motion-Techniken.</p>
-        <a href="https://www.youtube.com/playlist?list=PLcZYVGxWi6JiNEEqBx-10xowUipIkmEEJ" target="_blank">Video ansehen</a>
+  <!-- Section: Web und Appdesign -->
+  <section id="webdesign">
+    <h2>Web und Appdesign</h2>
+    <div class="slider" id="web-slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 1">
+        <p>Projekt 1 - Webdesign</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 2">
+        <p>Projekt 2 - Webdesign</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Corporate Identity Section -->
-    <div id="corporate" class="project">
-        <h2>Nachhaltige Schokolade - Corporate Identity</h2>
-        <img src="schokolade.jpg" alt="Nachhaltige Schokolade">
-        <p>Eine umweltschonende Verpackung für eine fiktive Firma, die Nachhaltigkeit und umweltfreundliches Design vereint.</p>
+  <!-- Section: Bewegtbild -->
+  <section id="bewegtbild">
+    <h2>Bewegtbild</h2>
+    <div class="slider" id="motion-slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 1">
+        <p>Projekt 1 - Bewegtbild</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 2">
+        <p>Projekt 2 - Bewegtbild</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Editorial Section -->
-    <div id="editorial" class="project">
-        <h2>Hamburg Reiseführer - Editorial / Fotografie</h2>
-        <img src="hamburg.jpg" alt="Hamburg Reiseführer">
-        <p>Ein Buchprojekt, das während eines Workshops entstanden ist, mit Fokus auf Typografie und Informationsstruktur.</p>
+  <!-- Section: Editorial -->
+  <section id="editorial">
+    <h2>Editorial</h2>
+    <div class="slider" id="editorial-slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 1">
+        <p>Projekt 1 - Editorial</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/300x200" alt="Projekt 2">
+        <p>Projekt 2 - Editorial</p>
+      </div>
     </div>
-</div>
+  </section>
 
-<footer>
-    <p>© 2024 Julia Leppert - Grafik Designerin</p>
-</footer>
-
+  <script src="scripts.js"></script>
 </body>
 </html>
