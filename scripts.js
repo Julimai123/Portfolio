@@ -1,15 +1,31 @@
-let currentIndex = 0;
+let currentSlideIndex = 0;
 
-function moveSlide(step, sliderId) {
-  const slider = document.getElementById(sliderId);
-  const slides = slider.getElementsByClassName('slide');
-  const totalSlides = slides.length;
+function showSlide(index, sliderId) {
+  const slides = document.querySelectorAll(`#${sliderId} .slide`);
+  
+  // Verstecke alle Slides
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  });
 
-  // Update the current index with wrap-around logic
-  currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-
-  // Move the slider
-  for (let i = 0; i < totalSlides; i++) {
-    slides[i].style.transform = `translateX(-${currentIndex * 100}%)`;
+  // Zeige den aktuellen Slide an
+  if (index >= slides.length) {
+    currentSlideIndex = 0; // Wenn der Index über die Anzahl der Slides hinausgeht, zurück zum ersten Slide
+  } else if (index < 0) {
+    currentSlideIndex = slides.length - 1; // Wenn der Index unter 0 ist, gehe zum letzten Slide
+  } else {
+    currentSlideIndex = index;
   }
+  
+  slides[currentSlideIndex].style.display = "block"; // Aktuellen Slide anzeigen
 }
+
+// Funktion zum Bewegen der Slides
+function moveSlide(direction, sliderId) {
+  showSlide(currentSlideIndex + direction, sliderId);
+}
+
+// Beim Laden der Seite den ersten Slide anzeigen
+document.addEventListener("DOMContentLoaded", function () {
+  showSlide(currentSlideIndex, "ci-slider");
+});
