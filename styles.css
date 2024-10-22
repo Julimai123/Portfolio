@@ -15,7 +15,7 @@
   font-variation-settings: "slnt" 0; /* Schrägstellung auf 0 setzen */
 }
 
-/* Zusätzliche Stile */
+/* Allgemeine Stile */
 body {
   font-family: 'Afacad Flux', sans-serif; /* Verwendung der Schriftart */
   padding: 20px;
@@ -43,7 +43,7 @@ nav a {
   color: #3F3E3C; /* Textfarbe */
 }
 
-main {
+section {
   margin-top: 20px;
 }
 
@@ -51,9 +51,38 @@ h2 {
   margin-top: 30px;
 }
 
+.slider {
+  position: relative;
+}
+
+.slide {
+  display: none; /* Initial versteckt */
+}
+
+.slide img {
+  max-width: 100%;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
 footer {
   margin-top: 40px;
   text-align: center;
   font-size: 0.9em;
 }
-
