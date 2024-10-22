@@ -49,28 +49,40 @@ section h2 {
 /* Slider Styling */
 .slider {
   display: flex;
-  overflow-x: scroll;
-  gap: 15px;
+  overflow: hidden; /* Hide content outside of the visible area */
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .slide {
-  min-width: 300px;
-  background-color: #FFFFFF;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border: 2px solid #809DAC;
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.slide img {
+.slider img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
 }
 
-/* Text within the slide */
-.slide p {
-  color: #3F3E3C;
-  margin-top: 10px;
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
 }
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
