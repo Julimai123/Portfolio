@@ -4,47 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julia Leppert - Grafikdesignerin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sue&display=swap" rel="stylesheet">
+  
+  <!-- Preconnect zu Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts: Afacad Flux -->
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <h1>Julia Leppert - Grafikdesignerin</h1>
+    <h1 class="afacad-flux-bold">Julia Leppert - Grafikdesignerin</h1>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="#corporate-identity">Corporate Identity</a></li>
-      <li><a href="#webdesign">Web und Appdesign</a></li>
-      <li><a href="#bewegtbild">Bewegtbild</a></li>
-      <li><a href="#editorial">Editorial</a></li>
+      <li><a href="#corporate-identity" class="afacad-flux-regular">Corporate Identity</a></li>
+      <li><a href="#webdesign" class="afacad-flux-regular">Web und Appdesign</a></li>
+      <li><a href="#bewegtbild" class="afacad-flux-regular">Bewegtbild</a></li>
+      <li><a href="#editorial" class="afacad-flux-regular">Editorial</a></li>
     </ul>
   </nav>
 
-  <!-- Section: Corporate Identity -->
-  <section id="corporate-identity">
-    <h2>Corporate Identity</h2>
-    <div class="slider" id="ci-slider">
-      <div class="slide">
-        <img src="https://via.placeholder.com/300x200" alt="Projekt 1">
-        <p>Projekt 1 - Corporate Identity</p>
-      </div>
-      <div class="slide">
-        <img src="https://via.placeholder.com/300x200" alt="Projekt 2">
-        <p>Projekt 2 - Corporate Identity</p>
-      </div>
-      <!-- Navigation Buttons -->
-      <button class="prev" onclick="moveSlide(-1, 'ci-slider')">❮</button>
-      <button class="next" onclick="moveSlide(1, 'ci-slider')">❯</button>
-    </div>
-  </section>
+  <main>
+    <section id="corporate-identity">
+      <h2 class="afacad-flux-bold">Corporate Identity</h2>
+      <!-- Hier können weitere Inhalte zu Corporate Identity eingefügt werden -->
+    </section>
 
-  <!-- Add the other sections similarly -->
+    <section id="webdesign">
+      <h2 class="afacad-flux-bold">Web und Appdesign</h2>
+      <!-- Hier können weitere Inhalte zu Web und Appdesign eingefügt werden -->
+    </section>
+
+    <section id="bewegtbild">
+      <h2 class="afacad-flux-bold">Bewegtbild</h2>
+      <!-- Hier können weitere Inhalte zu Bewegtbild eingefügt werden -->
+    </section>
+
+    <section id="editorial">
+      <h2 class="afacad-flux-bold">Editorial</h2>
+      <!-- Hier können weitere Inhalte zu Editorial eingefügt werden -->
+    </section>
+  </main>
+
+  <footer>
+    <p class="afacad-flux-regular">© 2024 Julia Leppert. Alle Rechte vorbehalten.</p>
+  </footer>
 
   <script src="scripts.js"></script>
 </body>
 </html>
-
