@@ -26,11 +26,13 @@ body {
 
 header {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 nav li {
@@ -49,6 +51,7 @@ section {
 
 h2 {
   margin-top: 30px;
+  font-size: 2em;
 }
 
 .slider {
@@ -57,6 +60,12 @@ h2 {
 
 .slide {
   display: none; /* Initial versteckt */
+  opacity: 0; /* Starten mit unsichtbaren Slides */
+  transition: opacity 0.5s ease-in-out; /* Übergang bei Änderung der Sichtbarkeit */
+}
+
+.slide.show {
+  opacity: 1; /* Sichtbar, wenn die 'show'-Klasse hinzugefügt wird */
 }
 
 .slide img {
@@ -69,8 +78,15 @@ button.prev, button.next {
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.7);
   border: none;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 24px;
+  border-radius: 50%; /* Runden der Ecken */
+  transition: background-color 0.3s ease; /* Übergangseffekt beim Hover */
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Hellere Farbe beim Hover */
 }
 
 button.prev {
@@ -81,8 +97,46 @@ button.next {
   right: 10px;
 }
 
+/* Allgemeine Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+  nav ul {
+    text-align: center;
+  }
+
+  nav li {
+    display: block; /* Navigationselemente untereinander anordnen */
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  button.prev, button.next {
+    font-size: 20px; /* Kleinere Buttons auf kleinen Bildschirmen */
+    padding: 8px 16px;
+  }
+}
+
+/* Noch kleinere Anpassungen für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em; /* Kleinere Schriftgröße im Header */
+  }
+
+  .slider img {
+    width: 100%; /* Bilder immer auf die volle Breite setzen */
+  }
+}
+
+/* Footer Stil */
 footer {
   margin-top: 40px;
   text-align: center;
   font-size: 0.9em;
+  color: #777; /* Ein etwas dunklerer Farbton für den Text */
+  border-top: 1px solid #ddd; /* Trennung zum Hauptinhalt */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
