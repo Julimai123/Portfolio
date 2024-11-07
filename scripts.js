@@ -1,26 +1,28 @@
 let currentSlideIndex = 0;
 
+// Funktion zum Anzeigen des Slides anhand des Index
 function showSlide(index, sliderId) {
   const slides = document.querySelectorAll(`#${sliderId} .slide`);
-  
+
   // Verstecke alle Slides
   slides.forEach((slide) => {
-    slide.style.display = "none";
+    slide.classList.remove('show');
   });
 
-  // Zeige den aktuellen Slide an
+  // Berechne den korrekten Index
   if (index >= slides.length) {
-    currentSlideIndex = 0; // Wenn der Index über die Anzahl der Slides hinausgeht, zurück zum ersten Slide
+    currentSlideIndex = 0;
   } else if (index < 0) {
-    currentSlideIndex = slides.length - 1; // Wenn der Index unter 0 ist, gehe zum letzten Slide
+    currentSlideIndex = slides.length - 1;
   } else {
     currentSlideIndex = index;
   }
-  
-  slides[currentSlideIndex].style.display = "block"; // Aktuellen Slide anzeigen
+
+  // Füge die "show"-Klasse zum aktuellen Slide hinzu
+  slides[currentSlideIndex].classList.add('show');
 }
 
-// Funktion zum Bewegen der Slides
+// Funktion zum Bewegen der Slides basierend auf der Richtung
 function moveSlide(direction, sliderId) {
   showSlide(currentSlideIndex + direction, sliderId);
 }
