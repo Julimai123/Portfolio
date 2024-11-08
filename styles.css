@@ -1,142 +1,69 @@
 /* Beispiel für die Schriftart Afacad Flux */
 .afacad-flux-regular {
   font-family: "Afacad Flux", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400; /* Normalgewicht */
-  font-style: normal;
-  font-variation-settings: "slnt" 0; /* Schrägstellung auf 0 setzen */
+  font-weight: 400;
 }
-
 .afacad-flux-bold {
   font-family: "Afacad Flux", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700; /* Fettgewicht */
-  font-style: normal;
-  font-variation-settings: "slnt" 0; /* Schrägstellung auf 0 setzen */
+  font-weight: 700;
 }
 
 /* Allgemeine Stile */
 body {
-  font-family: 'Afacad Flux', sans-serif; /* Verwendung der Schriftart */
+  font-family: 'Afacad Flux', sans-serif;
   padding: 20px;
   background-color: #FFFFFF;
   color: #3F3E3C;
-  line-height: 1.6; /* Für bessere Lesbarkeit */
+  line-height: 1.6;
 }
-
 header {
   margin-bottom: 20px;
-  text-align: center;
 }
-
 nav ul {
   list-style: none;
   padding: 0;
-  text-align: center;
 }
-
 nav li {
   display: inline;
   margin-right: 20px;
 }
-
 nav a {
   text-decoration: none;
-  color: #3F3E3C; /* Textfarbe */
+  color: #3F3E3C;
 }
-
 section {
   margin-top: 20px;
 }
-
 h2 {
   margin-top: 30px;
-  font-size: 2em;
 }
 
+/* Slider-Stile */
 .slider {
   position: relative;
+  max-width: 600px;
 }
-
 .slide {
-  display: none; /* Initial versteckt */
-  opacity: 0; /* Starten mit unsichtbaren Slides */
-  transition: opacity 0.5s ease-in-out; /* Übergang bei Änderung der Sichtbarkeit */
+  display: none;
 }
-
 .slide.show {
-  opacity: 1; /* Sichtbar, wenn die 'show'-Klasse hinzugefügt wird */
+  display: block;
 }
-
 .slide img {
   max-width: 100%;
 }
-
 button.prev, button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.7);
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
   font-size: 24px;
-  border-radius: 50%; /* Runden der Ecken */
-  transition: background-color 0.3s ease; /* Übergangseffekt beim Hover */
 }
-
-button.prev:hover, button.next:hover {
-  background-color: rgba(255, 255, 255, 0.9); /* Hellere Farbe beim Hover */
-}
-
 button.prev {
   left: 10px;
 }
-
 button.next {
   right: 10px;
 }
-
-/* Allgemeine Anpassung für kleinere Bildschirme */
-@media (max-width: 768px) {
-  nav ul {
-    text-align: center;
-  }
-
-  nav li {
-    display: block; /* Navigationselemente untereinander anordnen */
-    margin-bottom: 10px; /* Abstand zwischen den Links */
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  button.prev, button.next {
-    font-size: 20px; /* Kleinere Buttons auf kleinen Bildschirmen */
-    padding: 8px 16px;
-  }
-}
-
-/* Noch kleinere Anpassungen für sehr kleine Bildschirme */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em; /* Kleinere Schriftgröße im Header */
-  }
-
-  .slider img {
-    width: 100%; /* Bilder immer auf die volle Breite setzen */
-  }
-}
-
-/* Footer Stil */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #777; /* Ein etwas dunklerer Farbton für den Text */
-  border-top: 1px solid #ddd; /* Trennung zum Hauptinhalt */
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
