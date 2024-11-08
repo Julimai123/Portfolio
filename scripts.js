@@ -10,13 +10,7 @@ function showSlide(index, sliderId) {
   });
 
   // Berechne den korrekten Index
-  if (index >= slides.length) {
-    currentSlideIndex = 0;
-  } else if (index < 0) {
-    currentSlideIndex = slides.length - 1;
-  } else {
-    currentSlideIndex = index;
-  }
+  currentSlideIndex = (index + slides.length) % slides.length;
 
   // Füge die "show"-Klasse zum aktuellen Slide hinzu
   slides[currentSlideIndex].classList.add('show');
